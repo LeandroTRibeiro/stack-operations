@@ -1,11 +1,10 @@
 #include "libs.h"
-#include "functions.h"
+#include "functions.c"
 
 
 int main(int arg, char *argv[]) {
-    struct Stack s;
-    
     int option = 0;
+    
     do {
         system("cls");
         printf("\n");

@@ -3,28 +3,24 @@
 
 #include "constants.h"
 
-struct Stack {
-    int items[MAX_LENGHT];
-    int top;
-};
-
-struct Custumer {
-    char name[100];
+struct Client
+{
     int code;
+    char name[100];
 };
 
-struct Produto{
-    char desc[100];
-    int codigo;
-    int qtd;
-    float preco;
+struct Product
+{
+    int code;
+    char description[100];
+    int quantity;
+    float price;
 };
 
-extern struct Stack s;
-extern struct Custumer custumers[MAX_LENGHT];
-extern int custumerLength;
-extern struct Produto produto[MAX_LENGHT];
-extern int produtoLength;
+extern struct Client clients[MAX_LENGHT];
+extern int clientsLength;
 
+extern struct Product products[MAX_LENGHT];
+extern int productsLength;
 
 #endif
