@@ -17,7 +17,7 @@ void insertCustumer()
 
     clientsLength++;
 
-    printf("Digite o nome do cliente: ");
+    printf("\nDigite o nome do cliente: ");
     scanf(" %[^\n]", clients[clientsLength].name);
 
     clients[clientsLength].code = clientsLength;
@@ -37,11 +37,16 @@ void insertProduct()
 
     productsLength++;
 
-    printf("Digite a descricao do produto: ");
+    printf("\nDigite o nome do produto: ");
+    scanf(" %[^\n]", products[productsLength].name);
+
+    printf("\nDigite a descricao do produto: ");
     scanf(" %[^\n]", products[productsLength].description);
-    printf("Digite a quantidade em estoque do produto: ");
+
+    printf("\nDigite a quantidade em estoque do produto: ");
     scanf("%d", &products[productsLength].quantity);
-    printf("Digite o preco do produto: ");
+
+    printf("\nDigite o preco do produto: ");
     scanf("%f", &products[productsLength].price);
 
     products[productsLength].code = productsLength;
@@ -91,6 +96,7 @@ void showProduct()
         printf("\n");
         printf("\n==========================");
         printf("\nid: %d", products[i].code);
+        printf("\nNome: %s", products[i].name);
         printf("\nDescricao: %s", products[i].description);
         printf("\nQuantidade: %d", products[i].quantity);
         printf("\nPreco: %.2f", products[i].price);

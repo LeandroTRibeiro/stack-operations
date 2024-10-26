@@ -12,6 +12,7 @@ struct Client
 struct Product
 {
     int code;
+    char name[100];
     char description[100];
     int quantity;
     float price;
