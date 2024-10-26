@@ -60,18 +60,23 @@ void insertProduct()
     return;
 }
 
-void showCustumers()
+void printClient(int index)
+{
+    printf("\n");
+    printf("\n==========================");
+    printf("\nid: %d", clients[index].code);
+    printf("\nNome: %s", clients[index].name);
+    printf("\n==========================");
+    printf("\n");
+}
+
+void showClient()
 {
     system("cls");
 
     for (int i = 0; i <= clientsLength; i++)
     {
-        printf("\n");
-        printf("\n==========================");
-        printf("\nid: %d", clients[i].code);
-        printf("\nNome: %s", clients[i].name);
-        printf("\n==========================");
-        printf("\n");
+        printClient(i);
     }
 
     if (clientsLength < 0)
@@ -87,21 +92,26 @@ void showCustumers()
     return;
 }
 
+void printProduct(int index) {
+
+    printf("\n");
+    printf("\n==========================");
+    printf("\nid: %d", products[index].code);
+    printf("\nNome: %s", products[index].name);
+    printf("\nDescricao: %s", products[index].description);
+    printf("\nQuantidade: %d", products[index].quantity);
+    printf("\nPreco: %.2f", products[index].price);
+    printf("\n==========================");
+    printf("\n");
+}
+
 void showProduct()
 {
     system("cls");
 
     for (int i = 0; i <= productsLength; i++)
     {
-        printf("\n");
-        printf("\n==========================");
-        printf("\nid: %d", products[i].code);
-        printf("\nNome: %s", products[i].name);
-        printf("\nDescricao: %s", products[i].description);
-        printf("\nQuantidade: %d", products[i].quantity);
-        printf("\nPreco: %.2f", products[i].price);
-        printf("\n==========================");
-        printf("\n");
+        printProduct(i);
     }
 
     if (productsLength < 0)
@@ -128,12 +138,7 @@ void showCustumerById()
 
     if (custumerId >= 0 && !(custumerId > clientsLength) && !(clientsLength < 0))
     {
-        printf("\n");
-        printf("\n==========================");
-        printf("\nid: %d", clients[custumerId].code);
-        printf("\nNome: %s", clients[custumerId].name);
-        printf("\n==========================");
-        printf("\n");
+        printClient(custumerId);
     }
     else if (clientsLength < 0)
     {
@@ -151,5 +156,7 @@ void showCustumerById()
 
     return;
 }
+
+
 
 #endif

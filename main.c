@@ -1,11 +1,12 @@
 #include "libs.h"
 #include "functions.c"
 
-
-int main(int arg, char *argv[]) {
+int main(int arg, char *argv[])
+{
     int option = 0;
-    
-    do {
+
+    do
+    {
         system("cls");
         printf("\n");
         printf("\n==========================");
@@ -26,7 +27,7 @@ int main(int arg, char *argv[]) {
             insertCustumer();
             break;
         case 2:
-            showCustumers();
+            showClient();
             break;
         case 3:
             showCustumerById();
@@ -37,7 +38,7 @@ int main(int arg, char *argv[]) {
         case 5:
             showProduct();
             break;
-    
+
         default:
             printf("\nOpção Invalida!");
             break;
